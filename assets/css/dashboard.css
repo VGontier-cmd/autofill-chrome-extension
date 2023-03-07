@@ -1,0 +1,477 @@
+/**
+* @author Nyrres / nyrrespro@gmail.com
+* date: 2020-03-1
+* title: dashboard
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(#6CB2F8, #1278DD) no-repeat center center fixed;
+}
+
+a,
+a:hover {
+    transition-duration: 0.5s;
+    text-decoration: none;
+}
+
+
+p {
+    margin: 0;
+}
+
+
+table,
+td,
+tr {
+    text-align: center;
+}
+
+tbody,
+table {
+    width: 100%;
+}
+
+.fake-button {
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.fake-button p {
+    width: 50%;
+}
+
+.container {
+    width: 80%;
+    border: 1px solid rgb(201, 201, 201);
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.95);
+    color: black;
+    border-radius: 10px;
+    padding: 1%;
+    min-width: 500px;
+    transition-duration: 0.8s;
+}
+
+.container:hover {
+    transition-duration: 0.5s;
+    transform: scale(1.01);
+}
+
+.center_div {
+    margin-top: 20%;
+}
+
+.selector {
+    display: flex;
+    padding: 0.5%;
+    border-radius: 30px;
+    font-weight: bold;
+    transition-duration: 0.5s;
+    justify-content: space-around;
+}
+
+.selector a {
+    color: white;
+}
+
+.selector a:hover {
+    text-decoration: underline;
+}
+
+.selector * {
+    flex: 1;
+}
+
+input,
+.form-control {
+    position: relative;
+    background-color: white;
+    padding: 1%;
+    border-radius: 15px !important;
+    border: 1px solid rgb(80, 80, 80);
+    text-align: center;
+    transition-duration: 0.5s !important;
+}
+
+input:focus {
+    transition-duration: 0.5s;
+    border: 1px solid #1278DD;
+    background: rgb(240, 240, 240);
+}
+
+
+input,
+.form-control,
+.to-save {
+    outline: none !important;
+    border: 1px solid rgba(131, 131, 131, 0.521);
+}
+
+select {
+    border-radius: 15px !important;
+    width: 100%;
+    text-align: center;
+}
+
+.profiles-infos {
+    margin-bottom: 2%;
+}
+
+#information-btn,
+#settings-btn {
+    transition-duration: 0.5s;
+    background-color: rgba(108, 178, 248, 0.596);
+    max-width: 40%;
+    border-radius: 16px;
+    padding: .5%;
+}
+
+#information-btn:hover,
+#settings-btn:hover {
+    cursor: pointer;
+    transition-duration: 0.5s;
+    background-color: rgba(29, 83, 138, 0.596);
+}
+
+.slider:before {
+    background: white !important;
+
+}
+
+.form-group {
+    padding: 1%;
+
+    position: relative;
+}
+
+.form {
+    display: flex;
+}
+
+.adress-infos {
+    border-right: 1px solid rgb(194, 194, 194);
+}
+
+.adress-infos div,
+.payment-infos div {
+    margin-bottom: 2%;
+}
+
+.red-star {
+    color: red;
+}
+
+.bottom-infos {
+    margin-top: 1%;
+    padding-top: 1%;
+    border-top: 1px solid rgb(194, 194, 194);
+}
+
+button {
+    vertical-align: middle;
+    text-align: center;
+    padding: 1%;
+    color: white;
+    border-radius: 10px;
+    min-width: 70px;
+    border: none;
+}
+
+#btn-save-profile {
+    margin-top: 20%;
+}
+
+#btn-active-profile {
+    margin-top: 10%;
+}
+
+.form-group {
+    margin: auto;
+}
+
+.div-align-center {
+    margin-top: 2%;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+.div-btn-save {
+    margin: auto;
+    align-content: center;
+    text-align: center;
+}
+
+.btn-save {
+    padding: 0.4%;
+    text-align: center;
+    background-color: rgb(0, 180, 0);
+}
+
+.btn-delete {
+    background-color: rgb(202, 4, 4);
+}
+
+.btn-load {
+    background-color: rgb(1, 113, 204);
+}
+
+.part-title {
+    margin-bottom: 3%;
+    color: rgb(0, 119, 255);
+}
+
+.logo {
+    padding-left: 10%;
+}
+
+.logo img {
+    height: 70px;
+    width: 70px;
+}
+
+nav {
+    padding: 2%;
+    color: white !important;
+}
+
+
+#user-avatar {
+    position: relative;
+    top : 0;
+    right: 0;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+}
+
+.user-informations {
+    display: flex;
+}
+
+.logout {
+    color: white;
+    font-weight: 700;
+}
+
+#logout-btn {
+    position: relative;
+    top : 0;
+    right: 0;
+    margin-top: 50%;
+    margin-left: 50%;
+    transform: translate(-50%, -50%);
+}
+.a-settings {
+    text-decoration: underline !important;
+}
+
+.settings-part {
+    display: none;
+}
+
+#bg-logo {
+    z-index: -1;
+    opacity: 0.5;
+    position: absolute;
+    bottom: -40px;
+    right: -30px;
+    margin-left: -25px;
+    margin-top: -25px;
+}
+
+.div-logo {
+    margin-top: 2%;
+}
+
+.title {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 150%;
+    margin-left: 1%;
+    line-height: 70px;
+    text-align: right;
+}
+
+.version {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 50%;
+}
+
+.logo {
+    display: flex;
+}
+
+.setting {
+    justify-content: center;
+    display: flex;
+}
+
+.switch {
+    margin-left: 2%;
+}
+
+
+/*
+Toggle Switch
+*/
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+.input-w100 {
+    width: 100%;
+}
+
+input:checked+.slider:before {
+    transform: translateX(18px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.webhook-part {
+    margin-top: 2%;
+    width: 100%;
+}
+
+.webhook-part input {
+    padding: 0.5%;
+    width: 70%;
+}
+
+
+
+.webhook-part button {
+    padding: 0.5%;
+    cursor: pointer;
+    background-color: #1278DD;
+}
+
+.naked-part {
+    width: 100%;
+    margin-top: 4%;
+    text-align: center;
+}
+
+.naked-part .column {
+    width: 100%;
+    display: flex;
+}
+
+.size-selection select{
+    height: 25px;
+    font-size: 90%;
+    width: auto;
+    padding : 0%;
+}
+
+.size-selection div {
+    margin-right: 2%;
+}
+
+.credit {
+    background-color: rgb(0, 143, 252);
+    padding : 1%;
+    border-radius: 7px;
+    border : 1px solid black;
+    position: absolute;
+    left : 50%;
+    transform: translateX(-50%);
+    color : rgb(255, 255, 255);
+    margin-bottom: 2%;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.credit:hover{
+    background-color : rgb(1, 115, 202);
+    transform: translateX(-50%) scale(1.04) ;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.credit a {
+    color : white;
+    text-decoration: dashed;
+}
+
+.credit .heart {
+    color : rgb(199, 12, 12);
+}
+
+.part-title-settings {
+    padding-bottom: 1%;
+    font-size: large;
+    color: #1278DD;
+}
+@media only screen and (min-width: 1024px) {
+    .container {
+        width: 90%
+    }
+
+    .logo {
+        max-width: 50%;
+        padding-left: 0%;
+    }
+
+    nav {
+        justify-content: space-around;
+    }
+}

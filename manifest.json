@@ -1,0 +1,98 @@
+{
+    "manifest_version": 2,
+	"name": "Beast Chrome Tools",
+	"author": "VGontier-cmd / gontiervivien@gmail.com",
+	"description": "Chrome tools extension exclusively for CookBeast members",
+	"version": "2.019",
+    "icons": {
+		"48": "assets/icons/CB1-48.png",
+		"128": "assets/icons/CB1-128.png"
+	},
+    "permissions": [
+		"identity",
+		"webRequest",
+		"https://discordapp.com/*",
+		"https://*.shopifycs.com/*",
+		"https://*/*/checkouts/*",
+		"https://js.stripe.com/*",
+		"https://discordapp.com/*",
+		"https://discordapp.com/api/oauth2/token",
+		"storage"
+	],
+    "background": {
+        "scripts": ["assets/js/background.js"]
+	},
+	"browser_action": {
+		"default_title": "Beast Chrome Tools V2",
+		"default_popup": "popup.html"
+		},
+
+    "content_scripts": [
+		{
+			"matches": [
+				"http://134.122.66.16:3000/*"
+			],
+			"js": [
+				"assets/js/inject/authentication.js"
+			]
+		},
+		{
+			"matches": [
+				"https://*/*/checkouts/*"
+			],
+			"js": [
+				"assets/js/inject/shopify.js",
+				"assets/js/inject/shopify-logs.js"
+			]
+		},
+		{
+			"matches": [
+				"https://*.shopifycs.com/*"
+			],
+			"js": [
+				"assets/js/inject/shopify.js",
+				"assets/js/inject/shopify-card.js"
+			],
+			"all_frames": true
+		},
+		{
+			"matches": [
+				"http://*/*",
+				"https://*/*"
+			],
+			"js": [
+				"assets/js/inject/stripe.js"
+			],
+			"all_frames": true
+		},
+		{
+			"matches": [
+				"https://www.supremenewyork.com/*",
+				"file:///Users/vinius/Downloads/Supreme.htm"
+			],
+			"js": [
+				"assets/js/inject/supreme.js",
+				"assets/js/inject/supreme-logs.js"
+			],
+			"all_frames": true
+		},
+		{
+			"matches" : [
+				"https://www.nakedcph.com/*"
+			],
+			"js": [
+				"assets/js/inject/nakedcph.js"
+			],
+			"all_frames": true
+		},
+		{
+			"matches" : [
+				"https://live.adyen.com/*"
+			],
+			"js": [
+				"assets/js/inject/nakedcph-card.js"
+			],
+			"all_frames": true
+		}
+    ]
+}

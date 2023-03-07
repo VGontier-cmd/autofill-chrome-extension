@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700&display=swap');
+
+html {
+    margin: 0;
+    padding: 0;
+    font-size: 80%;
+    width: 270px;
+    transition-duration: 0.8s;
+}
+
+body {
+    color: white;
+    background: linear-gradient(#23272A, rgb(34, 37, 39)) no-repeat center center fixed;
+    padding: 2%;
+}
+
+/*
+* Head syle
+*/
+
+
+#loading-btn {
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+
+#title {
+    color: white;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+p {
+    color: white;
+    text-align: center;
+    margin-bottom: 0;
+
+}
+
+#img {
+    border-radius: 50px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    transition-duration: 0.5s;
+}
+
+#img:hover {
+    transition-duration: 0.5s;
+    transform: translateX(-50%) scale(1.1);
+}
+
+.dashboard-btn {
+    cursor: pointer;
+    color: black;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 2%;
+    background-color: #7289DA;
+    border-radius: 8px;
+    font-size: 80%;
+}
+
+.dashboard-btn:hover {
+    transition-duration: 0.5s;
+    background-color: rgb(130, 157, 252);
+}
+
+
+/*
+Activate / Deactivate the extension
+*/
+
+.setting {
+    border-top: 2px solid rgb(82, 82, 82);
+    text-align: center;
+    margin-top: 4%;
+    padding-top: 4%;
+}
+
+/*
+Toggle Switch
+*/
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    transform: translateX(18px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
